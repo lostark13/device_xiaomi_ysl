@@ -365,6 +365,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     $(LOCAL_PATH)/configs/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf
+	
+# Spectrum Manager
+PRODUCT_PACKAGES += \
+    init.spectrum.rc \
+    init.spectrum.sh	
 
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
