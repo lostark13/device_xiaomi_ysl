@@ -184,6 +184,8 @@ on charger
 
 on boot
 
+   chown system system /sys/kernel/hbtp/display_pwr
+
  # add for goodix
     chown system system /dev/goodix_fp
     chmod 0644 /dev/goodix_fp
