@@ -238,6 +238,13 @@ sys.use_fifo_ui=1
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.usb.config.extra=none
 
+# USB debugging
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.sys.usb.config=mtp,adb \
+ro.adb.secure=0 \
+ro.secure=0 \
+ro.debuggable=1
+
 # VoLTE hax
 PRODUCT_PROPERTY_OVERRIDES += \
    persist.dbg.volte_avail_ovr=1 \
