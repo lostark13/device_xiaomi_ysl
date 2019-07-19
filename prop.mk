@@ -157,6 +157,11 @@ vendor.hw.fm.init=0
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.frp.pst=/dev/block/bootdevice/by-name/config
 
+# IOP properties
+PRODUCT_PROPERTY_OVERRIDES += \
+vendor.iop.enable_uxe=1 \
+vendor.perf.iop_v3.enable=true
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
 debug.stagefright.omx_default_rank.sw-audio=1 \
