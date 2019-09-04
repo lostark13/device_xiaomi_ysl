@@ -189,8 +189,9 @@ ENABLE_VENDOR_RIL_SERVICE := true
 VENDOR_SECURITY_PATCH := 2020-11-05
 
 # SELinux
-include device/qcom/sepolicy-legacy-um/SEPolicy.mk
-BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+#include device/qcom/sepolicy-legacy-um/SEPolicy.mk
+#BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy-minimal
 
 # We modify several neverallows, so let the build proceed
 ifneq ($(TARGET_BUILD_VARIANT),user)
