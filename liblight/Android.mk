@@ -1,5 +1,4 @@
-#
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2008 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,17 +12,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+LOCAL_PATH:= $(call my-dir)
+# HAL module implemenation stored in
+# hw/<COPYPIX_HARDWARE_MODULE_ID>.<ro.board.platform>.so
 include $(CLEAR_VARS)
-LOCAL_SHARED_LIBRARIES := libhidltransport
-LOCAL_MODULE := android.hidl.base@1.0
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-include $(BUILD_SHARED_LIBRARY)
 
-include $(CLEAR_VARS)
-LOCAL_SHARED_LIBRARIES := libhidltransport
-LOCAL_MODULE := android.hidl.manager@1.0
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-include $(BUILD_SHARED_LIBRARY)
 
+LOCAL_SRC_FILES := lights.c
+LOCAL_MODULE_RELATIVE_PATH := hw
+LOCAL_SHARED_LIBRARIES := liblog
+LOCAL_CFLAGS := -DLOG_TAG=\"qdlights\"
+LOCAL_CLANG  := true
+LOCAL_MODULE := lights.$(TARGET_BOARD_PLATFORM)
+LOCAL_HEADER_LIBRARIES := libhardware_headers
+LOCAL_MODULE_TAGS := optional
+LOCAL_VENDOR_MODULE := true
+ifneq (,$(filter tissot,$(TARGET_DEVICE)))
+    LOCAL_CFLAGS += -DWHITE_LED
+endif
+
+include $(BUILD_SHARED_LIBRARY)
