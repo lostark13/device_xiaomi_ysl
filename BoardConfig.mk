@@ -195,10 +195,10 @@ TARGET_USES_OLD_MNC_FORMAT := true
 # Security patch level
 VENDOR_SECURITY_PATCH := 2019-06-01
 
-## SELinux
-# include device/qcom/sepolicy/sepolicy.mk
-# BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
-# BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+# SELinux
+include device/qcom/sepolicy/sepolicy.mk
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # We modify several neverallows, so let the build proceed
 ifneq ($(TARGET_BUILD_VARIANT),user)
