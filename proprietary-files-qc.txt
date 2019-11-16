@@ -420,7 +420,7 @@ vendor/lib64/libqti-perfd.so|96806732f4e5f8c25ba2e12a3a939fc2889c7341
 vendor/lib64/libqti-util.so|30dc90c1636fd100a8e101dfa659e0b7299ff813
 vendor/lib64/vendor.qti.hardware.perf@1.0.so|978a16bc6f27967f6345c5b51386d50768553ab5
 
-# Peripheral manager - From Tissot PKQ1.180917.001/V10.0.12.0.PDHMIXM
+# Peripheral manager - From LA.UM.8.6.r1-01900-89xx.0
 vendor/bin/pm-proxy|56e9bdaa39270aa4456c9995a8a9e4618ba616a6
 vendor/bin/pm-service|7cbca1671529a805177f11f3f72defdbbe48a61c
 vendor/lib/libperipheral_client.so|6e06ff7e89cb8054612c98c25240e7570c069752
@@ -428,12 +428,12 @@ vendor/lib64/libperipheral_client.so|e2fbf94c589dbf8ae6c544a34441783ae9db3a08
 
 # Power-off alarm - From Tissot PKQ1.180917.001/V10.0.12.0.PDHMIXM
 framework/vendor.qti.hardware.alarm-V1.0-java.jar|ca5bf830ebb4fbf8fc1994200ec6e03dc83c274b
--vendor/app/PowerOffAlarm/PowerOffAlarm.apk|3fbc64ee84b17eaaf5f9002b58f4615216de0389
-vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|b7f648c81773214202aaa3620863d048c90713c7
-vendor/bin/power_off_alarm|459ccd83df3fcc076bb82bff60f47d14ad69ad6e
+-vendor/app/PowerOffAlarm/PowerOffAlarm.apk|2399da8803ff7229476611f371fc435f48138881
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|28c768324a36e12a8c4a1a968caa25ad94a160fe
+vendor/bin/power_off_alarm|a98e375328492c0405d1712722bca0effa8cf2bb
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|c9877b6cae0353d5fdea5bc23dba77101b3d6980
-vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|df138b77fb116a1a786a70c9c76b69d61b5c04d2
-vendor/lib64/vendor.qti.hardware.alarm@1.0.so|5761eae471e8dcd94ce139e831a1aa5b23f133c6
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|656009a5cc2b3bc52a7706579a192a1f3328f37c
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so|00b41ba2e3737041c536d7a3fe87739edbd09516
 
 # QCOM Boost  - From Tissot PKQ1.180917.001/V10.0.12.0.PDHMIXM
 bin/perfservice
