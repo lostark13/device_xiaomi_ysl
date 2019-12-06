@@ -72,6 +72,12 @@ PRODUCT_COPY_FILES += \
 # Device Properties
 -include $(LOCAL_PATH)/prop.mk
 
+# A2DP
+PRODUCT_PACKAGES += \
+  audio.a2dp.default \
+  android.hardware.bluetooth.a2dp@1.0-impl \
+  android.hardware.bluetooth.a2dp@1.0-service
+
 # ANT
 PRODUCT_PACKAGES += \
     AntHalService \
@@ -84,7 +90,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-service \
     android.hardware.audio.effect@5.0-impl \
     android.hardware.soundtrigger@2.1-impl \
-    audio.a2dp.default \
     audio.primary.msm8953 \
     audio.r_submix.default \
     audio.usb.default \
