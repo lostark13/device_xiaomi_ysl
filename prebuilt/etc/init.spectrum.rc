@@ -16,25 +16,24 @@ on property:sys.boot_completed=1
 on property:persist.spectrum.profile=0
 # Configure governor settings for little cluster
 write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor schedutil
-write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor schedutil
-write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor schedutil
-write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor schedutil
-
+write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1804800
+write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 307200
  # Configure governor settings for big cluster
 write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor schedutil
-write /sys/devices/system/cpu/cpu5/cpufreq/scaling_governor schedutil
-write /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor schedutil
-write /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor schedutil
-
+write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1804800
+write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 307200
 #adreno idler
 write /sys/module/adreno_idler/parameters/adreno_idler_active 0
 
 #adreno boost
 write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 1
 
+#GPU
+write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_clock_mhz 650
+
 #IO Scheduler
-write /sys/block/mmcblk0/queue/scheduler bfq
-write /sys/block/mmcblk1/queue/scheduler bfq
+write /sys/block/mmcblk0/queue/scheduler cfq
+write /sys/block/mmcblk1/queue/scheduler cfq
 
 #TCP CCA
 write /proc/sys/net/ipv4/tcp_congestion_control bbr
@@ -42,26 +41,25 @@ write /proc/sys/net/ipv4/tcp_congestion_control bbr
 # Performance
 on property:persist.spectrum.profile=1
 # Configure governor settings for little cluster
-write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor ondemand
-write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor ondemand
-write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor ondemand
-write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor ondemand
-
+write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor schedutil
+write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1804800
+write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 307200
  # Configure governor settings for big cluster
-write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor ondemand
-write /sys/devices/system/cpu/cpu5/cpufreq/scaling_governor ondemand
-write /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor ondemand
-write /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor ondemand
-
+write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor schedutil
+write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1804800
+write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 307200
 #adreno idler
 write /sys/module/adreno_idler/parameters/adreno_idler_active 0
 
 #adreno boost
 write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 2
 
+#GPU
+write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_clock_mhz 650
+
 #IO Scheduler
-write /sys/block/mmcblk0/queue/scheduler fiops
-write /sys/block/mmcblk1/queue/scheduler fiops
+write /sys/block/mmcblk0/queue/scheduler cfq
+write /sys/block/mmcblk1/queue/scheduler cfq
 
 #TCP CCA
 write /proc/sys/net/ipv4/tcp_congestion_control bbr
@@ -69,26 +67,25 @@ write /proc/sys/net/ipv4/tcp_congestion_control bbr
 # Battery
 on property:persist.spectrum.profile=2
 # Configure governor settings for little cluster
-write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor conservative
-write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor conservative
-write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor conservative
-write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor conservative
-
+write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor schedutil
+write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1804800
+write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 307200
  # Configure governor settings for big cluster
-write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor conservative
-write /sys/devices/system/cpu/cpu5/cpufreq/scaling_governor conservative
-write /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor conservative
-write /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor conservative
-
+write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor schedutil
+write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1804800
+write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 307200
 #adreno idler
 write /sys/module/adreno_idler/parameters/adreno_idler_active 1
 
 #adreno boost
 write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 0
 
+#GPU
+write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_clock_mhz 650
+
 #IO Scheduler
-write /sys/block/mmcblk0/queue/scheduler noop
-write /sys/block/mmcblk1/queue/scheduler noop
+write /sys/block/mmcblk0/queue/scheduler cfq
+write /sys/block/mmcblk1/queue/scheduler cfq
 
 #TCP CCA
 write /proc/sys/net/ipv4/tcp_congestion_control bbr
@@ -96,26 +93,25 @@ write /proc/sys/net/ipv4/tcp_congestion_control bbr
 # Gaming
 on property:persist.spectrum.profile=3
 # Configure governor settings for little cluster
-write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor performance
-write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor performance
-write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor performance
-write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor performance
-
+write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor schedutil
+write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2016000
+write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 307200
  # Configure governor settings for big cluster
-write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor performance
-write /sys/devices/system/cpu/cpu5/cpufreq/scaling_governor performance
-write /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor performance
-write /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor performance
-
+write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor schedutil
+write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 2016000
+write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 307200
 #adreno idler
 write /sys/module/adreno_idler/parameters/adreno_idler_active 0
 
 #adreno boost
 write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 3
 
+#GPU
+write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_clock_mhz 825
+
 #IO Scheduler
-write /sys/block/mmcblk0/queue/scheduler maple
-write /sys/block/mmcblk1/queue/scheduler maple
+write /sys/block/mmcblk0/queue/scheduler cfq
+write /sys/block/mmcblk1/queue/scheduler cfq
 
 #TCP CCA
 write /proc/sys/net/ipv4/tcp_congestion_control bbr
