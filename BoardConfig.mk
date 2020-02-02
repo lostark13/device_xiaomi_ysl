@@ -183,7 +183,6 @@ TARGET_PER_MGR_ENABLED := true
 
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/dev/input/event1"
-TARGET_USES_NON_LEGACY_POWERHAL := true
 
 # Qualcomm
 BOARD_USES_QCOM_HARDWARE := true
