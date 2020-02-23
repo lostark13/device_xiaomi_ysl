@@ -134,6 +134,9 @@ PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0 \
     Snap 
 
+# Charger
+include $(LOCAL_PATH)/rootdir/charger/charger.mk
+
 # Consumerir
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
