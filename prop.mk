@@ -208,8 +208,10 @@ DEVICE_PROVISIONED=1 \
 persist.data.iwlan.enable=true \
 persist.dbg.ims_volte_enable=1 \
 persist.dbg.volte_avail_ovr=1 \
+persist.data.iwlan=1 \
+persist.data.iwlan.ipsec.ap=1 \
 persist.dbg.vt_avail_ovr=1 \
-persist.dbg.wfc_avail_ovr=0 \
+persist.dbg.wfc_avail_ovr=1 \
 persist.vendor.radio.aosp_usr_pref_sel=true \
 persist.radio.calls.on.ims=0 \
 persist.radio.csvt.enabled=false \
@@ -230,6 +232,15 @@ ro.telephony.call_ring.multiple=false \
 ro.telephony.default_network=22,20 \
 service.qti.ims.enabled=1 \
 telephony.lteOnCdmaDevice=1 \
+telephony.lteOnCdmaDevice=1 \
+persist.radio.VT_ENABLE=1 \
+persist.radio.volte.dan_support=true \
+persist.sys.cust.lte_config=true \
+ro.telephony.iwlan_operation_mode=legacy \
+persist.vendor.vt.supported=1 \
+persist.vendor.data.iwlan.enable=true \
+persist.vendor.sys.cnd.iwlan=1 \
+persist.vendor.cne.logging.qxdm=3974 \
 persist.sys.fflag.override.settings_network_and_internet_v2=true 
 
 # SurfaceFlinger
