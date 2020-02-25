@@ -43,28 +43,59 @@
          Zone N  1     array[N] <= LUX < infinity
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>3</item>
-        <item>4</item>
-        <item>6</item>
-        <item>8</item>
-        <item>13</item>
-        <item>17</item>
-        <item>21</item>
-        <item>26</item>
-        <item>30</item>
-        <item>34</item>
-        <item>140</item>
-        <item>310</item>
-        <item>400</item>
-        <item>500</item>
-        <item>600</item>
-        <item>1000</item>
-        <item>1200</item>
-        <item>1500</item>
-        <item>3000</item>
-        <item>3500</item>
-        <item>4000</item>
+       <item>1</item>
+       <item>2</item>
+       <item>3</item>
+       <item>4</item>
+       <item>5</item>
+       <item>6</item>
+       <item>8</item>
+       <item>13</item>
+       <item>17</item>
+       <item>21</item>
+       <item>26</item>
+       <item>30</item>
+       <item>34</item>
+       <item>140</item>
+       <item>310</item>
+       <item>400</item>
+       <item>500</item>
+       <item>600</item>
+       <item>1000</item>
+       <item>1200</item>
+       <item>1500</item>
+       <item>3000</item>
+       <item>3500</item>
+       <item>4000</item>
     </integer-array>
+
+    <array name="config_autoBrightnessLcdBacklightValues">
+      <item>32</item>
+      <item>32</item>
+      <item>32</item>
+      <item>48</item>
+      <item>48</item>
+      <item>80</item>
+      <item>80</item>
+      <item>192</item>
+      <item>192</item>
+      <item>320</item>
+      <item>320</item>
+      <item>624</item>
+      <item>624</item>
+      <item>688</item>
+      <item>688</item>
+      <item>880</item>
+      <item>880</item>
+      <item>1008</item>
+      <item>1008</item>
+      <item>1344</item>
+      <item>1488</item>
+      <item>1680</item>
+      <item>3200</item>
+      <item>3840</item>
+      <item>4095</item>
+   </array>
 
     <!-- Array of desired screen brightness in nits corresponding to the lux values
          in the config_autoBrightnessLevels array. As with config_screenBrightnessMinimumNits and
