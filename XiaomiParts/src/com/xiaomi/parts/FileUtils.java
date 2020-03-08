@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import android.os.SystemProperties;
 
 public class FileUtils {
 
@@ -126,5 +127,25 @@ public class FileUtils {
         }
         // ignore
         return line;
+    }
+
+    static void setProp(String prop, boolean value) {
+        if (value) {
+            SystemProperties.set(prop, "1");
+        } else {
+            SystemProperties.set(prop, "0");
+        }
+    }
+
+    static boolean getProp(String prop, boolean defaultValue) {
+        return SystemProperties.getBoolean(prop, defaultValue);
+    }
+
+    static void setStringProp(String prop, String value) {
+        SystemProperties.set(prop, value);
+    }
+
+    static String getStringProp(String prop, String defaultValue) {
+        return SystemProperties.get(prop, defaultValue);
     }
 }
