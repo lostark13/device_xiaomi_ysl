@@ -305,6 +305,7 @@ PRODUCT_BOOT_JARS += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
+	init.msm.usb.configfs.rc \
     init.class_main.sh \
     init.goodix.sh \
     init.qcom.bt.sh \
@@ -314,6 +315,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.sh \
     init.qcom.usb.rc \
+	init.ysl.rc \
     init.target.rc \
     move_time_data.sh \
     move_wifi_data.sh \
