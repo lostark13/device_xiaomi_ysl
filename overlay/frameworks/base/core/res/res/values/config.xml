@@ -633,6 +633,18 @@
     <!-- Whether device ignores the RSSNR signal implementation -->
     <bool name="config_ignoreRssnrSignalLevel">true</bool>
 
+    <!-- Whether or not to use intelligent profiles -->
+    <bool name="config_intelligent_performance_profile">true</bool>
+
+    <!-- Initially set all to balanced with persist.spectrum.profile=0
+    For example if you want to change performance profile from balanced to performance (in my case performance profile is persist.spectrum.profile=1 )
+    then set <string name="config_performance_profile" translatable="false">1</string>, override these config via device tree.
+    -->
+    <string name="config_balanced_profile" translatable="false">0</string>
+    <string name="config_performance_profile" translatable="false">3</string>
+    <string name="config_powersave_profile" translatable="false">2</string>
+    <string name="config_screen_off_profile" translatable="false">2</string>
+
     <!-- The component name, flattened to a string, for the default autofill service
          to  enabled for an user. This service must be trusted, as it can be activated
          without explicit consent of the user. If no autofill service with the
