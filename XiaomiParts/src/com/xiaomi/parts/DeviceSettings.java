@@ -34,7 +34,7 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String PREF_PRESET = "dirac_preset_pref";
 
     public static final String PREF_VIBRATION_STRENGTH = "vibration_strength";
-    public static final String VIBRATION_STRENGTH_PATH = "/sys/devices/virtual/timed_output/vibrator/vtg_level";
+    public static final String VIBRATION_STRENGTH_PATH = "/sys/class/leds/vibrator/vmax_mv_user";
 
     public static final String PREF_KEY_FPS_INFO = "fps_info";
 
