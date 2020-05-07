@@ -6,22 +6,6 @@
         android:key="audio"
         android:title="@string/audio_title">
 
-        <com.xiaomi.parts.preferences.CustomSeekBarPreference
-            android:defaultValue="2"
-            android:key="headphone_gain"
-            android:max="20"
-            app:min="-40"
-            android:icon="@drawable/ic_headphone"
-            android:title="@string/headphone_gain"/>
-
-        <com.xiaomi.parts.preferences.CustomSeekBarPreference
-            android:defaultValue="0"
-            android:key="microphone_gain"
-            android:max="20"
-            app:min="-10"
-            android:icon="@drawable/ic_mic"
-            android:title="@string/microphone_gain"/>
-
         <com.xiaomi.parts.preferences.SecureSettingSwitchPreference
             android:defaultValue="false"
             android:key="dirac_enabled"
