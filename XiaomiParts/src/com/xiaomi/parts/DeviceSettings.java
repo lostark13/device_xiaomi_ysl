@@ -18,6 +18,7 @@ import com.xiaomi.parts.preferences.SecureSettingListPreference;
 import com.xiaomi.parts.preferences.SecureSettingSwitchPreference;
 import com.xiaomi.parts.preferences.VibrationSeekBarPreference;
 import com.xiaomi.parts.preferences.CustomSeekBarPreference;
+import com.xiaomi.parts.preferences.NotificationLedSeekBarPreference;
 
 import com.xiaomi.parts.R;
 
@@ -40,10 +41,17 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String VIBRATION_STRENGTH_PATH = "/sys/class/leds/vibrator/vmax_mv_user";
 
     public static final String PREF_KEY_FPS_INFO = "fps_info";
+	
+	public static final String CATEGORY_NOTIF = "notification_led";
+    public static final String PREF_NOTIF_LED = "notification_led_brightness";
+    public static final String NOTIF_LED_PATH = "/sys/class/leds/red/max_brightness";
 
     // value of vtg_min and vtg_max
     public static final int MIN_VIBRATION = 116;
     public static final int MAX_VIBRATION = 3596;
+
+    public static final int MIN_LED = 150;
+    public static final int MAX_LED = 255;
 
     public static final  String PREF_BACKLIGHT_DIMMER = "backlight_dimmer";
     public static final  String BACKLIGHT_DIMMER_PATH = "/sys/module/mdss_fb/parameters/backlight_dimmer";
@@ -65,7 +73,13 @@ public class DeviceSettings extends PreferenceFragment implements
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.xiaomiparts_preferences, rootKey);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this.getContext());
-
+           
+        if (FileUtils.fileWritable(NOTIF_LED_PATH)) {
+            NotificationLedSeekBarPreference notifLedBrightness =
+                    (NotificationLedSeekBarPreference) findPreference(PREF_NOTIF_LED);
+            notifLedBrightness.setOnPreferenceChangeListener(this);
+        } else { getPreferenceScreen().removePreference(findPreference(CATEGORY_NOTIF)); }
+		
         VibrationSeekBarPreference vibrationStrength = (VibrationSeekBarPreference) findPreference(PREF_VIBRATION_STRENGTH);
         vibrationStrength.setEnabled(FileUtils.fileWritable(VIBRATION_STRENGTH_PATH));
         vibrationStrength.setOnPreferenceChangeListener(this);
@@ -142,6 +156,10 @@ public class DeviceSettings extends PreferenceFragment implements
     public boolean onPreferenceChange(Preference preference, Object value) {
         final String key = preference.getKey();
         switch (key) {
+	    case PREF_NOTIF_LED:
+                FileUtils.setValue(NOTIF_LED_PATH, (int) value / 100.0 * (MAX_LED - MIN_LED) + MIN_LED);
+                break;
+
             //case PREF_TORCH_BRIGHTNESS:
             //    FileUtils.setValue(TORCH_1_BRIGHTNESS_PATH, (int) value);
             //    FileUtils.setValue(TORCH_2_BRIGHTNESS_PATH, (int) value);

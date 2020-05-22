@@ -51,6 +51,19 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="notification_led"
+        android:icon="@drawable/ic_led"
+        android:title="@string/notification_title">
+        <com.xiaomi.parts.preferences.NotificationLedSeekBarPreference
+            android:key="notification_led_brightness"
+            android:title="@string/notification_led_title"
+            android:max="100"
+            app:min="1"
+            app:units="%"
+            android:defaultValue="100" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="display"
         android:title="@string/display_title">
 

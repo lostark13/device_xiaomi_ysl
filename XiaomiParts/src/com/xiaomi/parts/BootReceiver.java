@@ -33,7 +33,7 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
                             GREEN_DEFAULT) + " " +
                     Settings.Secure.getInt(context.getContentResolver(), PREF_BLUE,
                             BLUE_DEFAULT);
-
+            
             FileUtils.setValue(KCAL_RGB, rgbValue);
             FileUtils.setValue(KCAL_MIN, Settings.Secure.getInt(context.getContentResolver(),
                     PREF_MINIMUM, MINIMUM_DEFAULT));
@@ -60,7 +60,8 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
 		
 	    FileUtils.setValue(DeviceSettings.USB_FASTCHARGE_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_USB_FASTCHARGE, 0));	
-
+        FileUtils.setValue(DeviceSettings.NOTIF_LED_PATH, Settings.Secure.getInt(
+                 context.getContentResolver(), DeviceSettings.PREF_NOTIF_LED, 100) / 100.0 * (DeviceSettings.MAX_LED - DeviceSettings.MIN_LED) + DeviceSettings.MIN_LED);
         FileUtils.setValue(DeviceSettings.VIBRATION_STRENGTH_PATH, Settings.Secure.getInt(
                 context.getContentResolver(), DeviceSettings.PREF_VIBRATION_STRENGTH, 80) / 100.0 * (DeviceSettings.MAX_VIBRATION - DeviceSettings.MIN_VIBRATION) + DeviceSettings.MIN_VIBRATION);
 

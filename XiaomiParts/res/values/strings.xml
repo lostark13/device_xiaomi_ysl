@@ -114,6 +114,10 @@
     <string name="dirac_preset_dance">Dance</string>
     <string name="dirac_preset_metal">Metal</string>
 
+    <!-- Notification LED brightness -->
+    <string name="notification_title">Notification LED</string>
+    <string name="notification_led_title">LED brightness</string>
+
     <!-- Ambient gesture haptic feedback -->
     <string name="ambient_gesture_haptic_feedback">Haptic feedback</string>
     <string name="ambient_gesture_haptic_feedback_summary">Vibrate when a Ambient gesture is detected</string>
