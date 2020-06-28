@@ -18,12 +18,9 @@
     <string name="fps_info_title">FPS Info Overlay</string>
     <string name="fps_info_summary">Show overlay with current frames per second</string>
 
-    <!-- Backlight Dimmer -->
-    <string name="backlight_dimmer">Backlight Dimmer</string>
-    <string name="backlight_summary">Dim the display to the maximum value</string>
-
     <!-- Vibrator -->
     <string name="vibration_strength_title">Strength</string>
+
     <!-- Spectrum Profiles -->
     <string name="spectrum_profile_title">Spectrum</string>
     <string name="spectrum_title">Spectrum Profiles</string>

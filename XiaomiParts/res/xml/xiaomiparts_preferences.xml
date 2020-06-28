@@ -74,12 +74,6 @@
             android:summary="@string/fps_info_summary"
             android:persistent="true" />
 
-        <com.xiaomi.parts.preferences.SecureSettingSwitchPreference
-            android:key="backlight_dimmer"
-            android:icon="@drawable/ic_backlight"
-            android:title="@string/backlight_dimmer"
-            android:summary="@string/backlight_summary" />
-
         <Preference
             android:key="device_kcal"
             android:persistent="false"

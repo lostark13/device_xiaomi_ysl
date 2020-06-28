@@ -53,8 +53,6 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final int MIN_LED = 150;
     public static final int MAX_LED = 255;
 
-    public static final  String PREF_BACKLIGHT_DIMMER = "backlight_dimmer";
-    public static final  String BACKLIGHT_DIMMER_PATH = "/sys/module/mdss_fb/parameters/backlight_dimmer";
 	public static final String CATEGORY_FASTCHARGE = "usb_fastcharge";
     public static final String PREF_USB_FASTCHARGE = "fastcharge";
     public static final String USB_FASTCHARGE_PATH = "/sys/kernel/fast_charge/force_fast_charge";
@@ -127,11 +125,6 @@ public class DeviceSettings extends PreferenceFragment implements
         }
 
         PreferenceCategory displayCategory = (PreferenceCategory) findPreference(CATEGORY_DISPLAY);
-
-        SecureSettingSwitchPreference backlightDimmer = (SecureSettingSwitchPreference) findPreference(PREF_BACKLIGHT_DIMMER);
-        backlightDimmer.setEnabled(BacklightDimmer.isSupported());
-        backlightDimmer.setChecked(BacklightDimmer.isCurrentlyEnabled(this.getContext()));
-        backlightDimmer.setOnPreferenceChangeListener(new BacklightDimmer(getContext()));
 
         SwitchPreference fpsInfo = (SwitchPreference) findPreference(PREF_KEY_FPS_INFO);
         fpsInfo.setChecked(prefs.getBoolean(PREF_KEY_FPS_INFO, false));
