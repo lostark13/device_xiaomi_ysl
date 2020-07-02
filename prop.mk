@@ -249,7 +249,8 @@ persist.vendor.vt.supported=1 \
 persist.vendor.data.iwlan.enable=true \
 persist.vendor.sys.cnd.iwlan=1 \
 persist.vendor.cne.logging.qxdm=3974 \
-persist.sys.fflag.override.settings_network_and_internet_v2=true 
+persist.vendor.radio.data_con_rprt=1 \
+persist.sys.fflag.override.settings_network_and_internet_v2=true
 
 # SurfaceFlinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
