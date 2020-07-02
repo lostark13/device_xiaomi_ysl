@@ -64,10 +64,6 @@ vendor.qcom.bluetooth.soc=smd \
 ro.bluetooth.hfp.ver=1.7 \
 ro.qualcomm.bt.hci_transport=smd
 
-# Boot
-PRODUCT_PROPERTY_OVERRIDES += \
-sys.vendor.shutdown.waittime=500
-
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
 camera.display.lmax=1280x720 \
@@ -85,11 +81,12 @@ vidc.enc.dcvs.extra-buff-count=2 \
 persist.camera.HAL3.enabled=1 \
 vendor.camera.hal1.packagelist=com.whatsapp,com.intsig.camscanner \
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.android.GoogleCamera \
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.qualcomm.qti.qmmi,com.longcheertel.cit
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.qualcomm.qti.qmmi,com.longcheertel.cit 
 
 # Cne
 PRODUCT_PROPERTY_OVERRIDES += \
-persist.vendor.cne.feature=1
+persist.vendor.cne.feature=1 \
+persist.cne.feature=1
 
 # Coresight
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -106,13 +103,13 @@ dalvik.vm.heapmaxfree=8m
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
-debug.egl.hw=0 \
+debug.egl.hw=1 \
 debug.enable.sglscale=1 \
 debug.gralloc.enable_fb_ubwc=1 \
 debug.mdpcomp.logs=0 \
 debug.sf.enable_hwc_vds=1 \
-debug.sf.hw=0 \
-debug.sf.latch_unsignaled=0 \
+debug.sf.hw=1 \
+debug.sf.latch_unsignaled=1 \
 debug.sf.recomputecrop=0 \
 dev.pm.dyn_samplingrate=1 \
 persist.demo.hdmirotationlock=false \
@@ -122,7 +119,7 @@ ro.opengles.version=196610 \
 ro.qualcomm.cabl=0 \
 ro.sf.lcd_density=320 \
 debug.sdm.support_writeback=0 \
-ro.vendor.display.cabl=2 \
+ro.vendor.display.cabl=0 \
 sdm.debug.disable_skip_validate=1 \
 vendor.display.disable_skip_validate=1 \
 vendor.display.enable_default_color_mode=0 \
@@ -152,13 +149,6 @@ vendor.hw.fm.init=0
 # Frp
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.frp.pst=/dev/block/bootdevice/by-name/config
-
-# IMS debug
-PRODUCT_PROPERTY_OVERRIDES += \
-persist.vendor.ims.disableADBLogs=1 \
-persist.vendor.ims.disableDebugLogs=1 \
-persist.vendor.ims.disableIMSLogs=1 \
-persist.vendor.ims.disableQXDMLogs=1
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -200,15 +190,15 @@ persist.vendor.data.mode=concurrent
 
 # Nitz
 PRODUCT_PROPERTY_OVERRIDES += \
-persist.rild.nitz_plmn="" \
-persist.rild.nitz_long_ons_0="" \
-persist.rild.nitz_long_ons_1="" \
-persist.rild.nitz_long_ons_2="" \
-persist.rild.nitz_long_ons_3="" \
-persist.rild.nitz_short_ons_0="" \
-persist.rild.nitz_short_ons_1="" \
-persist.rild.nitz_short_ons_2="" \
-persist.rild.nitz_short_ons_3=""
+persist.vendor.radio.nitz_plmn="" \
+persist.vendor.radio.nitz_lons_0="" \
+persist.vendor.radio.nitz_lons_1="" \
+persist.vendor.radio.nitz_lons_2="" \
+persist.vendor.radio.nitz_lons_3="" \
+persist.vendor.radio.nitz_sons_0="" \
+persist.vendor.radio.nitz_sons_1="" \
+persist.vendor.radio.nitz_sons_2="" \
+persist.vendor.radio.nitz_sons_3=""
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -236,10 +226,10 @@ persist.vendor.radio.sib16_support=1 \
 ril.subscription.types=NV,RUIM \
 rild.libargs=-d/dev/smd0 \
 rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
+persist.vendor.radio.redir_party_num=1 \
 ro.telephony.call_ring.multiple=false \
 ro.telephony.default_network=22,20 \
 service.qti.ims.enabled=1 \
-telephony.lteOnCdmaDevice=1 \
 telephony.lteOnCdmaDevice=1 \
 persist.radio.VT_ENABLE=1 \
 persist.radio.volte.dan_support=true \
@@ -251,6 +241,10 @@ persist.vendor.sys.cnd.iwlan=1 \
 persist.vendor.cne.logging.qxdm=3974 \
 persist.vendor.radio.data_con_rprt=1 \
 persist.sys.fflag.override.settings_network_and_internet_v2=true
+
+# RCS
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.rcs.supported=1
 
 # SurfaceFlinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -273,7 +267,7 @@ net.tcp.2g_init_rwnd=10
 
 # UI
 PRODUCT_PROPERTY_OVERRIDES += \
-sys.use_fifo_ui=0
+sys.use_fifo_ui=1
 
 # Usb
 PRODUCT_PROPERTY_OVERRIDES += \
