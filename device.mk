@@ -136,7 +136,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0_vendor \
     android.frameworks.displayservice@1.0 \
-    Snap 
+    Snap
 
 # Charger
 include $(LOCAL_PATH)/rootdir/charger/charger.mk
@@ -252,10 +252,6 @@ PRODUCT_COPY_FILES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.msm8953
-	
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -305,16 +301,11 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 # QMI
 PRODUCT_PACKAGES += \
     libjson
-	
-#QTI performance
-PRODUCT_BOOT_JARS += \
-    QPerformance \
-    UxPerformance
 
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
-	init.msm.usb.configfs.rc \
+    init.msm.usb.configfs.rc \
     init.class_main.sh \
     init.goodix.sh \
     init.qcom.bt.sh \
@@ -324,7 +315,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.sh \
     init.qcom.usb.rc \
-	init.ysl.rc \
+    init.ysl.rc \
     init.target.rc \
     move_time_data.sh \
     move_wifi_data.sh \
@@ -370,11 +361,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     $(LOCAL_PATH)/configs/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf
-	
+
 # Spectrum Manager
 PRODUCT_PACKAGES += \
     init.spectrum.rc \
-    init.spectrum.sh	
+    init.spectrum.sh
 
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
@@ -444,8 +435,8 @@ PRODUCT_BOOT_JARS += \
 
 # XiaomiParts
 PRODUCT_PACKAGES += \
-    XiaomiParts	
-	
+    XiaomiParts
+
 # RetroMusic
 PRODUCT_PACKAGES += \
-    RetroMusic	
+    RetroMusic
