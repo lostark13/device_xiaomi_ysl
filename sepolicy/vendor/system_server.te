@@ -12,3 +12,8 @@ allow system_server sysfs_vibrator:file read;
 
 # smart charging
 allow system_server sysfs_battery_supply:file rw_file_perms;
+
+allow system_server sysfs:file { read };
+allow system_server sysfs:file { open };
+allow system_server sysfs:file { getattr };
+allow system_server sysfs:file { write };

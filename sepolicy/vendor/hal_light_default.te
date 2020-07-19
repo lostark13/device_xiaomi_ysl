@@ -1,0 +1,6 @@
+allow hal_light_default sysfs:file { read };
+allow hal_light_default sysfs:file { open };
+allow hal_light_default sysfs:file { getattr };
+allow hal_light_default sysfs:file { write };
+
+

@@ -1,2 +1,9 @@
 allow mm-qcamerad camera_socket:dir rw_dir_perms;
 allow mm-qcamerad camera_socket:sock_file { create unlink };
+allow mm-qcamerad camera_data_file:dir { search };
+allow mm-qcamerad diag_device:chr_file { read };
+allow mm-qcamerad diag_device:chr_file { open };
+allow mm-qcamerad diag_device:chr_file { write };
+allow mm-qcamerad diag_device:chr_file { ioctl };
+allow mm-qcamerad vendor_camera_data_file:file { create write open getattr };
+
