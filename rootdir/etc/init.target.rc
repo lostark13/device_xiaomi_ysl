@@ -162,11 +162,6 @@ service energy-awareness /system/vendor/bin/energy-awareness
     user root
     group system
     oneshot
-	
-service vendor.hvdcp_opti /system/vendor/bin/hvdcp_opti
-    class main
-    user root
-    group system wakelock	
 
 service vendor.hvdcp_opti /system/vendor/bin/hvdcp_opti
     class main
