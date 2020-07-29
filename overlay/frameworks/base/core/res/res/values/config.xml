@@ -657,6 +657,17 @@
     <!-- Whether or not to use intelligent profiles -->
     <bool name="config_intelligent_performance_profile">true</bool>
 
+    <!-- Flag indicating whether the surface flinger has limited
+         alpha compositing functionality in hardware.  If set, the window
+         manager will disable alpha trasformation in animations where not
+         strictly needed. -->
+    <bool name="config_sf_limitedAlpha">true</bool>
+
+    <!-- Enables or disables fading edges when marquee is enabled in TextView.
+         Off by default, since the framebuffer readback used to implement the
+         fading edges is prohibitively expensive on most GPUs. -->
+    <bool name="config_ui_enableFadingMarquee">true</bool>
+
     <!-- Initially set all to balanced with persist.spectrum.profile=0
     For example if you want to change performance profile from balanced to performance (in my case performance profile is persist.spectrum.profile=1 )
     then set <string name="config_performance_profile" translatable="false">1</string>, override these config via device tree.
