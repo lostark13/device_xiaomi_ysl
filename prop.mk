@@ -173,6 +173,7 @@ vendor.iop.enable_uxe=1 \
 vendor.iop.enable_prefetch_ofr=1 \
 vendor.perf.iop_v3.enable=1 \
 ro.vendor.at_library=libqti-at.so \
+ro.vendor.qti.va_aosp.support=1 \
 persist.vendor.qti.games.gt.prof=1
 
 # Netmgrd
