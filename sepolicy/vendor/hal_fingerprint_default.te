@@ -38,4 +38,7 @@ allow hal_fingerprint_default init:unix_stream_socket { connectto };
 allow hal_fingerprint_default sdcardfs:file { getattr };
 allow hal_fingerprint_default sdcardfs:dir { search };
 allow hal_fingerprint_default rootfs:dir { read };
+allow hal_fingerprint_default sysfs_leds:dir { open };
+allow hal_fingerprint_default sysfs_leds:dir { read };
+allow hal_fingerprint_default sysfs_leds:dir { search };
 
