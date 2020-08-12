@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-     $(LOCAL_DIR)/derp_ysl.mk
+     $(LOCAL_DIR)/rr_ysl.mk
 
 COMMON_LUNCH_CHOICES := \
-derp_ysl-user \
-derp_ysl-userdebug \
-derp_ysl-eng	
+rr_ysl-user \
+rr_ysl-userdebug \
+rr_ysl-eng	
