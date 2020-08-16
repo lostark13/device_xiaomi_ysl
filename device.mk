@@ -332,8 +332,7 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     move_time_data.sh \
     move_wifi_data.sh \
-    ueventd.qcom.rc \
-    init.safailnet.rc
+    ueventd.qcom.rc
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
