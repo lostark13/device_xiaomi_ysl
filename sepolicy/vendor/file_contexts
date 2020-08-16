@@ -70,3 +70,9 @@
 /sys/bus/platform/drivers/kcal_ctrl(/.*)?                    u:object_r:kcal_dev:s0
 /sys/class/graphics/fb0/measured_fps                         u:object_r:sysfs_fpsinfo:s0
 /sys/kernel/fast_charge/force_fast_charge                    u:object_r:sysfs_fastcharge:s0
+/sys/class/leds/red/max_brightness		             u:object_r:sysfs_graphics:s0
+/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8940@3:qcom,haptics@c000/leds/vibrator(/.*)?              u:object_r:sysfs_vibrator:s0
+/sys/class/leds/vibrator/vmax_override               u:object_r:sysfs_vibrator:s0
+/sys/class/leds/vibrator/vmax_mv_user                u:object_r:sysfs_vibrator:s0
+/sys/class/leds/vibrator/vmax_mv_call                u:object_r:sysfs_vibrator:s0
+/sys/class/leds/vibrator/vmax_mv_strong              u:object_r:sysfs_vibrator:s0
