@@ -41,4 +41,9 @@ allow hal_fingerprint_default rootfs:dir { read };
 allow hal_fingerprint_default sysfs_leds:dir { open };
 allow hal_fingerprint_default sysfs_leds:dir { read };
 allow hal_fingerprint_default sysfs_leds:dir { search };
+allow hal_fingerprint_default media_rw_data_file:dir { open read };
+allow hal_fingerprint_default media_rw_data_file:file getattr;
+allow hal_fingerprint_default sdcardfs:dir { open read };
+allow hal_fingerprint_default sdcardfs:file { append open read };
+
 

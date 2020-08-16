@@ -1,1 +1,5 @@
 allow adbd adbd:capability { sys_admin };
+allow adbd kernel:system syslog_read;
+allow adbd pstorefs:dir search;
+allow adbd pstorefs:file { getattr open read };
+
