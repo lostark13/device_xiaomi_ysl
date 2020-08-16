@@ -624,8 +624,8 @@
    <!-- Whether auto face unlock is enabled by default -->
    <bool name="config_autoFaceUnlockEnabledByDefault">true</bool>
 
-   <!-- Whether the device supports Smart Pixels--> 
-    <bool name="config_enableSmartPixels">true</bool>
+   <!-- Whether the device supports Smart Pixels --> 
+   <bool name="config_supportSmartPixels">true</bool>
    
    <!-- Display mode remapping table.
          If the mode names returned by the backend do not match
