@@ -38,7 +38,7 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
 
     public static final String PREF_VIBRATION_STRENGTH = "vibration_strength";
-    public static final String VIBRATION_STRENGTH_PATH = "/sys/class/leds/vibrator/vmax_mv_user";
+    public static final String VIBRATION_STRENGTH_PATH = "/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8940@3:qcom,haptics@c000/leds/vibrator/vmax_mv_user";
 
     public static final String PREF_KEY_FPS_INFO = "fps_info";
 	

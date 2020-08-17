@@ -26,7 +26,7 @@ type proc_touchpanel, fs_type, sysfs_type, proc_type;
 
 # XiaomiParts
 type kcal_dev, sysfs_type, fs_type;
-type sysfs_fpsinfo, sysfs_type, fs_type
+type sysfs_fpsinfo, sysfs_type, fs_type;
 type sysfs_fastcharge, sysfs_type, fs_type;
 type sysfs_chargeled, sysfs_type, fs_type;
 
