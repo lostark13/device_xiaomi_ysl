@@ -172,13 +172,7 @@ ro.sys.fw.dex2oat_thread_count=8
 
 #QTI Performance
 PRODUCT_PROPERTY_OVERRIDES += \
-vendor.enable_prefetch=1 \
-vendor.iop.enable_uxe=1 \
-vendor.iop.enable_prefetch_ofr=1 \
-vendor.perf.iop_v3.enable=1 \
-ro.vendor.at_library=libqti-at.so \
-ro.vendor.qti.va_aosp.support=1 \
-persist.vendor.qti.games.gt.prof=1
+ro.vendor.qti.va_aosp.support=1 
 
 # Netmgrd
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -247,12 +241,6 @@ persist.rcs.supported=1
 # SurfaceFlinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 ro.surface_flinger.protected_contents=true
-
-PRODUCT_PROPERTY_OVERRIDES += \
-debug.sf.early_phase_offset_ns=1500000 \
-debug.sf.early_app_phase_offset_ns=1500000 \
-debug.sf.early_gl_phase_offset_ns=3000000 \
-debug.sf.early_gl_app_phase_offset_ns=15000000
     
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -280,10 +268,6 @@ ro.adb.secure=0 \
 ro.secure=0 \
 ro.debuggable=1
 
-# VoLTE hax
-PRODUCT_PROPERTY_OVERRIDES += \
-   persist.dbg.volte_avail_ovr=1 \
-   persist.dbg.vt_avail_ovr=1
 
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
