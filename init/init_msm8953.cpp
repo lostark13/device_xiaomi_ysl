@@ -28,6 +28,7 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include <sys/sysinfo.h>
+#include <android-base/properties.h>
 
 #include "vendor_init.h"
 #include "property_service.h"
@@ -36,7 +37,7 @@
 char const *heapgrowthlimit;
 char const *heapminfree;
 
-using android::init::property_set;
+using android::base::SetProperty;
 
 void check_device()
 {
@@ -59,10 +60,10 @@ void vendor_load_properties()
 {
     check_device();
 
-    property_set("dalvik.vm.heapstartsize", "16m");
-    property_set("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
-    property_set("dalvik.vm.heapsize", "512m");
-    property_set("dalvik.vm.heaptargetutilization", "0.75");
-    property_set("dalvik.vm.heapminfree", heapminfree);
-    property_set("dalvik.vm.heapmaxfree", "8m");
+    SetProperty("dalvik.vm.heapstartsize", "16m");
+    SetProperty("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
+    SetProperty("dalvik.vm.heapsize", "512m");
+    SetProperty("dalvik.vm.heaptargetutilization", "0.75");
+    SetProperty("dalvik.vm.heapminfree", heapminfree);
+    SetProperty("dalvik.vm.heapmaxfree", "8m");
 }
