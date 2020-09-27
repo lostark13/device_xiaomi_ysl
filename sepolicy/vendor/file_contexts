@@ -64,6 +64,7 @@
 
 # Root folders
 /firmware(/.*)?          u:object_r:firmware_file:s0
+/persist(/.*)?           u:object_r:mnt_vendor_file:s0
 
 # XiaomiParts
 /sys/devices/platform/kcal_ctrl.0(/.*)?                      u:object_r:kcal_dev:s0
