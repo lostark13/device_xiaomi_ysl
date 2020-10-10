@@ -26,6 +26,10 @@ $(call inherit-product, device/xiaomi/ysl/device.mk)
 $(call inherit-product, vendor/octavi/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 720
 
+#Gapps
+$(call inherit-product-if-exists, vendor/google/gms/config.mk)
+$(call inherit-product-if-exists, vendor/google/pixel/config.mk)
+
 # Inherit from custom vendor
 $(call inherit-product, vendor/MiuiCamera/config.mk)
 
