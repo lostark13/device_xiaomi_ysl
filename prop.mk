@@ -69,6 +69,12 @@ persist.vendor.qcom.bluetooth.enable.splita2dp=false \
 persist.vendor.bt.a2dp.aac_whitelist=false \
 ro.bluetooth.library_name=libbluetooth.so
 
+# Blur
+PRODUCT_PRODUCT_PROPERTIES += \
+ro.sf.blurs_are_expensive=1 \
+ro.surface_flinger.supports_background_blur=1 \
+debug.sf.disable_backpressure=1
+
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
 camera.display.lmax=1280x720 \
