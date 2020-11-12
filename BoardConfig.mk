@@ -172,7 +172,7 @@ TARGET_USES_MKE2FS := true
 TARGET_PER_MGR_ENABLED := true
 
 # Power
-TARGET_POWER_SET_FEATURE_LIB := libpower_feature.xiaomi_msm8953
+TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
 
 # Qualcomm
 BOARD_USES_QCOM_HARDWARE := true
