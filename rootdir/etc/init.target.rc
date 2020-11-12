@@ -98,7 +98,7 @@ service vendor.per_mgr /vendor/bin/pm-service
     group system
     ioprio rt 4
     writepid /dev/cpuset/system-background/tasks
-
+	
 service vendor.power-hal /vendor/bin/hw/android.hardware.power-service
     override
     class hal
