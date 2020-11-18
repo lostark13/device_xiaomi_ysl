@@ -173,10 +173,13 @@ PRODUCT_PACKAGES += \
     memtrack.msm8953 \
     libdisplayconfig \
     liboverlay \
+	 libqdMetaData \
+    libqdMetaData.vendor \
     libqdMetaData.system \
     libgenlock \
     libtinyxml \
-    libvulkan  \
+    libstagefright_enc_common \
+    libvulkan \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor
 
