@@ -33,6 +33,9 @@ $(call inherit-product-if-exists, vendor/google/pixel/config.mk)
 # Inherit from custom vendor
 $(call inherit-product, vendor/MiuiCamera/config.mk)
 
+OCTAVI_BUILD_TYPE := Official
+OCTAVI_DEVICE_MAINTAINER := Tushar Bharti
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := ysl
 PRODUCT_NAME := octavi_ysl
