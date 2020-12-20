@@ -17,6 +17,6 @@ PRODUCT_MAKEFILES := \
      $(LOCAL_DIR)/pixys_ysl.mk
 
 COMMON_LUNCH_CHOICES := \
-pixys-user \
+pixys_ysl-user \
 pixys_ysl-userdebug \
 pixys_ysl-eng	
