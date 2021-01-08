@@ -99,6 +99,12 @@ service vendor.per_mgr /vendor/bin/pm-service
     ioprio rt 4
     writepid /dev/cpuset/system-background/tasks
 
+service vendor.power-hal /vendor/bin/hw/android.hardware.power-service
+    override
+    class hal
+    user system
+    group system input	
+
 service vendor.per_proxy /vendor/bin/pm-proxy
     class core
     user system
