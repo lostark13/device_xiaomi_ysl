@@ -48,8 +48,8 @@ BOARD_VENDOR := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Build fingerprint
-BUILD_FINGERPRINT := google/redfin/redfin:11/RQ1A.201205.011/6966805:user/release-keys
-BUILD_DESCRIPTION := redfin-user 11 RQ1A.201205.011 6966805 release-keys
+BUILD_FINGERPRINT := google/coral/coral:11/RQ1A.210105.003/7005429:user/release-keys
+BUILD_DESCRIPTION := coral-user 11 RQ1A.210105.003 7005429 release-keys
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
