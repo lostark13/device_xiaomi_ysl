@@ -1,0 +1,18 @@
+[
+ {
+   "remote":"github",
+   "repository":"lostark13/vendor_xiaomi_ysl",
+   "target_path":"vendor/xiaomi",
+   "branch": "11" 
+ },
+ {
+   "remote": "github",
+   "repository": "lostark13/kernel_xiaomi_cannon",
+   "target_path": "kernel/xiaomi/msm8953"
+ },
+ { 
+   "remote": "github",
+   "repository": "lostark13/MiuiCamera",
+   "target_path": "vendor/MiuiCamera" 
+ }
+]
