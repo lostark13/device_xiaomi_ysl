@@ -1,18 +1,20 @@
 [
- {
-   "remote":"github",
-   "repository":"lostark13/vendor_xiaomi_ysl",
-   "target_path":"vendor/xiaomi",
-   "branch": "11" 
- },
- {
-   "remote": "github",
-   "repository": "lostark13/kernel_xiaomi_cannon",
-   "target_path": "kernel/xiaomi/msm8953"
- },
+   {
+      "repository":"CorvusRom-Devices/vendor_xiaomi_ysl",
+      "target_path":"vendor/xiaomi",
+      "branch":"11",
+      "remote":"github"
+   },
+   {
+      "repository":"lostark13/kernel_xiaomi_cannon",
+      "target_path":"kernel/xiaomi/msm8953",
+      "branch":"11",
+      "remote":"github"
+   },
  { 
-   "remote": "github",
-   "repository": "lostark13/MiuiCamera",
-   "target_path": "vendor/MiuiCamera" 
+      "repository":"lostark13/MiuiCamera",
+      "target_path":"vendor/MiuiCamera",
+      "branch":"11",
+      "remote":"github",
  }
 ]
