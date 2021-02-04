@@ -150,8 +150,7 @@ ro.fingerprint.cleanup.unused=false
 
 # Fm
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.fm.transmitter=false \
-vendor.hw.fm.init=0
+hw.fm.init=0
 
 # Frp
 PRODUCT_PROPERTY_OVERRIDES += \
