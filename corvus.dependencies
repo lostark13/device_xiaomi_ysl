@@ -12,9 +12,27 @@
       "remote":"github"
    },
  { 
-      "repository":"lostark13/MiuiCamera",
+      "repository":"lostark13/vendor_MiuiCamera",
       "target_path":"vendor/MiuiCamera",
       "branch":"11",
-      "remote":"github",
- }
+      "remote":"github"
+ },
+ { 
+      "repository":"Jabiyeff/android_hardware_qcom_media",
+      "target_path":"hardware/qcom-caf/msm8996/media",
+      "branch":"caf-msm8996-r",
+      "remote":"github"
+ },      
+  { 
+      "repository":"Jabiyeff/android_hardware_qcom_display",
+      "target_path":"hardware/qcom-caf/msm8996/display",
+      "branch":"caf-msm8996-r",
+      "remote":"github"
+ },   
+ { 
+      "repository":"LineageOS/android_hardware_qcom_audio",
+      "target_path":"hardware/qcom-caf/msm8996/audio",
+      "branch":"lineage-18.1-caf-msm8996",
+      "remote":"github"
+ }   
 ]
