@@ -45,8 +45,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.corvus.maintainer=Tushar Bharti
 
 # Build fingerprint
-BUILD_FINGERPRINT := google/coral/coral:11/RQ1A.210105.003/7005429:user/release-keys
-BUILD_DESCRIPTION := coral-user 11 RQ1A.210105.003 7005429 release-keys
+BUILD_FINGERPRINT := google/redfin/redfin:11/RQ1A.210205.004/7038034:user/release-keys
+BUILD_DESCRIPTION := redfin-user 11 RQ1A.210205.004 7038034 release-keys
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
