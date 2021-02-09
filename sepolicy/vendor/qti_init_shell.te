@@ -22,3 +22,4 @@ allow qti_init_shell system_data_file:file { getattr };
 allow qti_init_shell system_data_file:dir { remove_name };
 allow qti_init_shell system_data_file:file { unlink };
 allow qti_init_shell system_data_file:dir { rmdir };
+allow qti_init_shell sysfs:file write;
