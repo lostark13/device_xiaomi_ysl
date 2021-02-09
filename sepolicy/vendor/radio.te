@@ -1,6 +1,5 @@
 allow radio gpuservice:binder { call };
 allow radio system_app_data_file:dir { getattr };
-get_prop(radio, qcom_ims_prop)
-userdebug_or_eng(`
-  allow radio diag_device:chr_file rw_file_perms;
-')
+allow radio cnd:binder call;
+allow radio hal_datafactory_hwservice:hwservice_manager find;
+allow radio qcom_ims_prop:file { getattr open read };

@@ -17,3 +17,7 @@ allow init sysfs_kgsl:lnk_file { read };
 allow init sysfs:file { open };
 allow init sysfs:file { write };
 allow init sysfs:file { setattr };
+allow init proc:file setattr;
+allow init system_file:file execute_no_trans;
+allow init system_server:binder call;
+allow init vendor_file:file execute_no_trans;

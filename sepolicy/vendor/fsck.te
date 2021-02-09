@@ -1,3 +1,4 @@
 allow fsck tmpfs:blk_file { getattr };
 allow fsck fsck:capability { dac_override };
 allow fsck fsck:capability { sys_admin };
+allow fsck self:capability kill;
