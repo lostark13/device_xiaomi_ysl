@@ -100,6 +100,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.cne.feature=1 \
 persist.cne.feature=1
 
+# DPM
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.vendor.dpm.feature=11 \
+persist.vendor.dpm.loglevel=0 \
+persist.vendor.dpm.nsrm.bkg.evt=3955 \
+persist.vendor.dpmhalservice.enable=1
+
 # Coresight
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.debug.coresight.config=stm-events
