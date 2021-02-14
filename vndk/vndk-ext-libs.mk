@@ -6,15 +6,14 @@ EXTRA_VENDOR_LIBRARIES := \
     libaudiomanager \
     libaudiopolicy \
     libbinder \
-    libbinderthreadstate \
     libbufferhub \
     libbufferhubqueue \
     libcamera_client \
+    libcutils \
     libft2 \
     libgui \
     libharfbuzz_ng \
     libheif \
-    libicuuc \
     libicui18n \
     libinput \
     libmedia \
@@ -29,4 +28,5 @@ EXTRA_VENDOR_LIBRARIES := \
     libselinux \
     libstdc++ \
     libsonivox \
+    libunwind \
     libvibrator
