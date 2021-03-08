@@ -447,36 +447,23 @@ vendor/lib/libmmcamera_ysl_s5k5e8_aux_sunny_ii_eeprom.so
 vendor/bin/mm-qcamera-daemon
 
 # Camera QCOM Libraries - from Ysl PKQ1.181203.001/V10.3.2.0.PEFCNXM
-vendor/lib/hw/camera.msm8953.so
-vendor/lib/libarcsoft_beautyshot.so
-vendor/lib/libarcsoft_dualcam_refocus.so
 vendor/lib/libarcsoft_high_dynamic_range.so
-vendor/lib/libFaceGrade.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so
-vendor/lib/lib_lowlight.so
 vendor/lib/libmibokeh_8953.so
 vendor/lib/libMiWatermark.so
-vendor/lib/libmmcamera_interface.so
-vendor/lib/libmmjpeg_interface.so
 vendor/lib/libmmjpeg.so
-vendor/lib/libmm-qcamera.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmmqjpegdma.so
-vendor/lib/libmpbase.so
-vendor/lib/libqomx_core.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc_pipe.so
 vendor/lib/libqomx_jpegenc.so
 vendor/lib/libremosaic_daemon.so
 vendor/lib/libvidhance.so
 vendor/lib/libvidhance_gyro.so
-vendor/lib/libXMFD_AgeGender.so
 vendor/lib/libois_lc898122.so
--vendor/lib/libarcsoft_beautyshot_exin.so
-
 vendor/lib/libmmcamera2_c2d_module.so
 vendor/lib/libmmcamera2_cpp_module.so
 vendor/lib/libmmcamera2_dcrf.so
@@ -566,13 +553,6 @@ vendor/etc/camera/ysl_s5k3p8sp_sunny_cn_ii_chromatix.xml
 vendor/etc/camera/ysl_s5k3p8sp_sunny_ii_chromatix.xml
 vendor/etc/camera/ysl_s5k5e8_aux_ofilm_i_chromatix.xml
 vendor/etc/camera/ysl_s5k5e8_aux_sunny_ii_chromatix.xml
-
-# Camera HIDL - from Ysl PKQ1.181203.001/V10.3.2.0.PEFCNXM (HACK NEEDED)
-vendor/bin/hw/android.hardware.camera.provider@2.4-service
-vendor/lib/camera.device@1.0-impl.so
-vendor/lib/camera.device@3.2-impl.so
-vendor/lib/camera.device@3.3-impl.so
-vendor/lib/hw/android.hardware.camera.provider@2.4-impl.so
 
 # Display Calibration - from Ysl PKQ1.181203.001/V10.3.2.0.PEFCNXM
 vendor/etc/qdcm_calib_data_auo_ili7807d_hd720_video_mode_dsi_panel.xml
