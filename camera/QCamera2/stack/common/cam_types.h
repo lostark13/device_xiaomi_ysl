@@ -1527,6 +1527,7 @@ typedef struct {
     int32_t est_snap_iso_value;
     uint32_t est_snap_luma;
     uint32_t est_snap_target;
+    volatile char xiaomi_1[12];
 } cam_3a_params_t;
 
 typedef struct {
@@ -1955,6 +1956,11 @@ typedef enum {
 
     CAM_INTF_PARM_EZTUNE_CMD,
     CAM_INTF_PARM_INT_EVT,
+    
+    XIAOMI_01,
+    XIAOMI_02,
+    XIAOMI_03,
+    XIAOMI_04,
 
     /* specific to HAL3 */
     /* Whether the metadata maps to a valid frame number */
@@ -2221,6 +2227,9 @@ typedef enum {
     /* Param of scaling information for JPEG encoder */
     CAM_INTF_PARM_JPEG_SCALE_DIMENSION,
     /*Param for updating Quadra CFA mode */
+
+    XIAOMI_05,
+
     CAM_INTF_PARM_QUADRA_CFA,
     /* Meta Raw Dim */
     CAM_INTF_META_RAW,
@@ -2233,7 +2242,14 @@ typedef enum {
     /*Spot light detection result output from af core*/
     CAM_INTF_META_SPOT_LIGHT_DETECT,
     /* HAL based HDR*/
+
+    XIAOMI_06,
+
     CAM_INTF_PARM_HAL_BRACKETING_HDR,
+
+    XIAOMI_07,
+    XIAOMI_08,
+    
     CAM_INTF_PARM_MAX
 } cam_intf_parm_type_t;
 
