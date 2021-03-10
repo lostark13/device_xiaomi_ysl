@@ -613,7 +613,7 @@ typedef struct {
 } cam_stream_img_prop_t;
 
 typedef struct {
-    uint8_t enableStream; /*0 – stop and 1-start */
+    uint8_t enableStream; /*0 \96 stop and 1-start */
 } cam_request_frames;
 
 typedef struct {
@@ -800,6 +800,12 @@ typedef struct {
     INCLUDE(CAM_INTF_META_AUTOFOCUS_DATA,               cam_auto_focus_data_t,          1);
     INCLUDE(CAM_INTF_META_CDS_DATA,                     cam_cds_data_t,                 1);
     INCLUDE(CAM_INTF_PARM_UPDATE_DEBUG_LEVEL,           uint32_t,                       1);
+    
+    INCLUDE(XIAOMI_02,                                  uint8_t,                        1);
+    INCLUDE(XIAOMI_01,                                  uint32_t,                       3);
+    INCLUDE(XIAOMI_03,                                  uint32_t,                       1);
+    INCLUDE(XIAOMI_04,                                  uint32_t,                       1);
+    INCLUDE(XIAOMI_06,                                  uint32_t,                       1);
 
     /* Specific to HAl1 */
     INCLUDE(CAM_INTF_META_CROP_DATA,                    cam_crop_data_t,                1);
@@ -967,6 +973,9 @@ typedef struct {
     INCLUDE(CAM_INTF_META_TOUCH_AE_RESULT,              int32_t,                     1);
     INCLUDE(CAM_INTF_PARM_LED_CALIBRATION,              cam_led_calibration_mode_t,  1);
     INCLUDE(CAM_INTF_PARM_ADV_CAPTURE_MODE,             uint8_t,                     1);
+    
+    INCLUDE(XIAOMI_05,                                  uint32_t,                    1);
+    
     INCLUDE(CAM_INTF_PARM_QUADRA_CFA,                   int32_t,                     1);
     INCLUDE(CAM_INTF_META_RAW,                          cam_dimension_t,             1);
     INCLUDE(CAM_INTF_META_STREAM_INFO_FOR_PIC_RES,      cam_stream_size_info_t,      1);
