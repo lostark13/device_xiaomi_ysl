@@ -14,9 +14,5 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-     $(LOCAL_DIR)/octavi_ysl.mk
+     $(LOCAL_DIR)/p404_ysl.mk
 
-COMMON_LUNCH_CHOICES := \
-octavi_ysl-user \
-octavi_ysl-userdebug \
-octavi_ysl-eng	
