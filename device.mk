@@ -183,10 +183,6 @@ PRODUCT_PACKAGES += \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor
 
-# Doze mode
-PRODUCT_PACKAGES += \
-    XiaomiDoze	
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
@@ -462,7 +458,3 @@ PRODUCT_BOOT_JARS += \
 # XiaomiParts
 PRODUCT_PACKAGES += \
     XiaomiParts
-
-# RetroMusic
-PRODUCT_PACKAGES += \
-    RetroMusic
