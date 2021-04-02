@@ -101,16 +101,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-vendor.qcom.bluetooth.soc=smd \
-ro.bluetooth.hfp.ver=1.7 \
-ro.qualcomm.bt.hci_transport=smd \
-ro.bluetooth.a2dp_offload.supported=false \
-persist.bluetooth.a2dp_offload.disabled=true \
-persist.bluetooth.bluetooth_audio_hal.disabled=true \
-vendor.audio.feature.a2dp_offload.enable=false \
-persist.vendor.qcom.bluetooth.enable.splita2dp=false \
-persist.vendor.bt.a2dp.aac_whitelist=false \
-ro.bluetooth.library_name=libbluetooth.so
+ro.bluetooth.library_name=libbluetooth_qti.so \
+persist.vendor.qcom.bluetooth.soc=pronto \
+ro.vendor.bluetooth.wipower=false
 
 # Blur
 PRODUCT_PRODUCT_PROPERTIES += \
