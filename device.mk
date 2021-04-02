@@ -331,6 +331,7 @@ PRODUCT_PACKAGES += \
 
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := \
+    gps \
     perf \
     telephony
 
