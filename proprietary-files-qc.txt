@@ -682,7 +682,6 @@ vendor/lib/libdiag.so|e58fea073d2da7f14a84d2fd3ff59501be2f631a
 vendor/lib64/libdiag.so|4ce5001e2c426456c1ade5ebb0ca7191fe43180b
 
 # Radio - from LA.UM.9.6.2.r1-03600-89xx.0
--system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|a32f88ddcc8f9cba18aa5697ee5bd52201e89b13
 vendor/bin/adpl|fa1cb30ba086886d4c5329e7f4d97cea5459003e
 vendor/bin/hw/qcrild|d25d2f28227b032fbce336abb01bf93053d85ac9
 vendor/bin/netmgrd|b19ee396b8ebd2f60e5677bba28d6d3e613d9781
