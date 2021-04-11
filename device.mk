@@ -392,11 +392,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_HOST_PACKAGES += \
     signapk    
 
-# Spectrum Manager
-PRODUCT_PACKAGES += \
-    init.spectrum.rc \
-    init.spectrum.sh
-
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
@@ -470,7 +465,3 @@ PRODUCT_BOOT_JARS += \
 # XiaomiParts
 PRODUCT_PACKAGES += \
     XiaomiParts
-
-# RetroMusic
-PRODUCT_PACKAGES += \
-    RetroMusic
