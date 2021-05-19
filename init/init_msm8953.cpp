@@ -29,16 +29,19 @@
 #include <stdlib.h>
 #include <sys/sysinfo.h>
 #include <android-base/properties.h>
+#define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
 #include "vendor_init.h"
 #include "property_service.h"
 #include "log/log.h"
+#include <string.h>
 
 char const *heapgrowthlimit;
 char const *heapminfree;
 
-using android::base::SetProperty;
+using android::base::GetProperty;
+using std::string;
 
 void check_device()
 {
@@ -56,13 +59,24 @@ void check_device()
         heapminfree = "2m";
    }
 }
+void property_override(char const prop[], char const value[], bool add = true) {
+    prop_info *pi;
+
+    pi = (prop_info *)__system_property_find(prop);
+
+    if (pi)
+        __system_property_update(pi, value, strlen(value));
+    else if (add)
+        __system_property_add(prop, strlen(prop), value, strlen(value));
+}
+
 void set_avoid_gfxaccel_config() {
     struct sysinfo sys;
     sysinfo(&sys);
 
     if (sys.totalram <= 3072ull * 1024 * 1024) {
         // Reduce memory footprint
-        SetProperty("ro.config.avoid_gfx_accel", "true");
+        property_override("ro.config.avoid_gfx_accel", "true");
     }
 }
 void load_ysl() {
@@ -90,10 +104,10 @@ void vendor_load_properties()
     check_device();
 	set_avoid_gfxaccel_config();
 
-    SetProperty("dalvik.vm.heapstartsize", "16m");
-    SetProperty("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
-    SetProperty("dalvik.vm.heapsize", "512m");
-    SetProperty("dalvik.vm.heaptargetutilization", "0.75");
-    SetProperty("dalvik.vm.heapminfree", heapminfree);
-    SetProperty("dalvik.vm.heapmaxfree", "8m");
+    property_override("dalvik.vm.heapstartsize", "16m");
+    property_override("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
+    property_override("dalvik.vm.heapsize", "512m");
+    property_override("dalvik.vm.heaptargetutilization", "0.75");
+    property_override("dalvik.vm.heapminfree", heapminfree);
+    property_override("dalvik.vm.heapmaxfree", "8m");
 }
