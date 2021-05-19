@@ -441,6 +441,10 @@
 
     <!-- Disable bluetooth by default -->
     <bool name="def_bluetooth_on">false</bool>
+    
+    <!-- Maximum number of supported users -->
+    <bool name="config_enableMultiUserUI">true</bool>
+    <integer name="config_multiuserMaximumUsers">4</integer>
 	
     <!-- Config determines whether to update phone object when voice registration
          state changes. Voice radio tech change will always trigger an update of
