@@ -29,6 +29,7 @@
 #include <stdlib.h>
 #include <sys/sysinfo.h>
 #include <android-base/properties.h>
+#include <sys/_system_properties.h>
 
 #include "vendor_init.h"
 #include "property_service.h"
@@ -64,9 +65,28 @@ void set_avoid_gfxaccel_config() {
         SetProperty("ro.config.avoid_gfx_accel", "true");
     }
 }
+void load_ysl() {
+    property_override("ro.product.model", "Redmi S2");
+    property_override("ro.build.product", "ysl");
+    property_override("ro.product.device", "ysl");
+}
+
+void load_ysl_india() {
+    property_override("ro.product.model", "Redmi Y2");
+    property_override("ro.build.product", "ysl");
+    property_override("ro.product.device", "ysl");
+}
 
 void vendor_load_properties()
-{
+{ 
+     std::string region = android::base::GetProperty("ro.boot.hwc", "");
+
+	if (region.find("INDIA") != std::string::npos) {
+        load_ysl_india();
+	}	
+	else{
+        load_ysl();		
+	}
     check_device();
 	set_avoid_gfxaccel_config();
 
