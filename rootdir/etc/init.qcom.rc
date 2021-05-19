@@ -629,12 +629,6 @@ service vendor.audio-hal-2-0 /vendor/bin/hw/android.hardware.audio@2.0-service
     interface android.hardware.audio@4.0::IDevicesFactory default
     interface android.hardware.audio@2.0::IDevicesFactory default
 	
-#add MIUI camera flag
-on property:sys.camera.miui.apk=*
-    setprop vendor.camera.miui.apk ${sys.camera.miui.apk}
-# Add CTS Flag For Camera
-on property:sys.camera.cts.mode=*
-    setprop vendor.camera.cts.mode ${sys.camera.cts.mode}
 # Add CTS Verifier Flag For Camera
 on property:sys.camera.cts.verifier.mode=*
     setprop vendor.camera.cts.verifier.mode ${sys.camera.cts.verifier.mode}

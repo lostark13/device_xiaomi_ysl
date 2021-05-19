@@ -30,9 +30,6 @@ TARGET_BOOT_ANIMATION_RES := 720
 $(call inherit-product-if-exists, vendor/google/gms/config.mk)
 $(call inherit-product-if-exists, vendor/google/pixel/config.mk)
 
-# Inherit from custom vendor
-$(call inherit-product, vendor/MiuiCamera/config.mk)
-
 OCTAVI_BUILD_TYPE := Official
 OCTAVI_DEVICE_MAINTAINER := Tushar Bharti
 
