@@ -93,7 +93,7 @@ void load_ysl_india() {
 
 void vendor_load_properties()
 { 
-     std::string region = android::base::GetProperty("ro.boot.hwc", "");
+     std::string region = android::base::GetProperty("ro.boot.hwcountry", "");
 
 	if (region.find("INDIA") != std::string::npos) {
         load_ysl_india();
