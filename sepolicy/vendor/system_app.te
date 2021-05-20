@@ -15,3 +15,4 @@ allow system_app sysfs_vibrator:file { open read getattr write };
 allow system_app sysfs_vibrator:file rw_file_perms;
 # allow system apps to read battery status
 r_dir_file(system_app, sysfs_battery_supply)
+allow system_app default_android_service:service_manager { find };
